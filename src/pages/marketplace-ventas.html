@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Adonde</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+</head>
+<body class="bg-light">
+    <!-- Top Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">E-BAZAR</a>
+            <div class="d-flex align-items-center">
+                <div class="input-group me-3">
+                    <input type="text" class="form-control" placeholder="Buscar productos...">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newProductModal">
+                    <i class="fas fa-plus"></i> Vender
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-4">
+        <!-- Categories -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex gap-3 overflow-auto pb-2">
+                    <button class="btn btn-outline-primary active">Todo</button>
+                    <button class="btn btn-outline-primary">Libros</button>
+                    <button class="btn btn-outline-primary">Electrónicos</button>
+                    <button class="btn btn-outline-primary">Ropa</button>
+                    <button class="btn btn-outline-primary">Accesorios</button>
+                    <button class="btn btn-outline-primary">Otros</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="../assets/producto1.jpg" class="card-img-top" alt="Laptop">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Nuevo</span>
+                        <h5 class="card-title">Laptop HP</h5>
+                        <p class="card-text text-muted">Intel i5, 8GB RAM, 256GB SSD</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">$8,999</span>
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-comment me-1"></i>Contactar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="../assets/producto2.jpg" class="card-img-top" alt="Libros">
+                    <div class="card-body">
+                        <span class="badge bg-info mb-2">Usado</span>
+                        <h5 class="card-title">Pack Libros Ingeniería</h5>
+                        <p class="card-text text-muted">Cálculo, Física y Química</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">$599</span>
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-comment me-1"></i>Contactar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="../assets/producto3.jpg" class="card-img-top" alt="Vapes">
+                    <div class="card-body">
+                        <span class="badge bg-warning mb-2">Destacado</span>
+                        <h5 class="card-title">Vapes Premium</h5>
+                        <p class="card-text text-muted">Varios sabores disponibles</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">$299</span>
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-comment me-1"></i>Contactar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="../assets/producto4.jpg" class="card-img-top" alt="Ropa">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">Oferta</span>
+                        <h5 class="card-title">Hoodie Universitario</h5>
+                        <p class="card-text text-muted">Tallas S, M, L disponibles</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">$399</span>
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-comment me-1"></i>Contactar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Product Modal -->
+    <div class="modal fade" id="newProductModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Publicar Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newProductForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del producto</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Categoría</label>
+                            <select class="form-select">
+                                <option>Libros</option>
+                                <option>Electrónicos</option>
+                                <option>Ropa</option>
+                                <option>Accesorios</option>
+                                <option>Otros</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Precio</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Descripción</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Imágenes</label>
+                            <input type="file" class="form-control" multiple accept="image/*">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="newProductForm" class="btn btn-primary">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="navbar fixed-bottom navbar-light bg-white shadow-lg">
+        <div class="container-fluid justify-content-around">
+            <a class="navbar-brand" href="eventos.html"><i class="fas fa-glass-cheers"></i></a>
+            <a class="navbar-brand active" href="marketplace-ventas.html"><i class="fas fa-store"></i></a>
+            <a class="navbar-brand" href="notificaciones.html"><i class="fas fa-bell"></i></a>
+            <a class="navbar-brand" href="perfil.html"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+/* css perfil */
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.perfil-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.perfil-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil-imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.perfil-nombre {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.perfil-bio {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.perfil-info {
+    margin-bottom: 20px;
+}
+
+.perfil-info p {
+    margin: 5px 0;
+}
+
+.perfil-acciones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.perfil-acciones button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* css perfil fin*/
+/* css eventos*/
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    padding: 20px;
+    padding-bottom: 60px; /* Espacio para la barra de navegación */
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+}
+/* css eventos fin*/
+/* AppUni/styles.css */
+/* css perfil */
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.perfil-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.perfil-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil-imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.perfil-nombre {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.perfil-bio {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.perfil-info {
+    margin-bottom: 20px;
+}
+
+.perfil-info p {
+    margin: 5px 0;
+}
+
+.perfil-acciones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.perfil-acciones button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* css perfil fin*/
+
+/* css eventos */
+.content {
+    padding: 20px;
+    padding-bottom: 60px; /* Espacio para la barra de navegación */
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+}
+/* css eventos fin */
+
+/* css login */ 
+/* Fondo verde con negro */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*fondo inicio*/
+.container {
+    width: 100%;
+    height: 100%;
+    --s: 140px; /* control de tamaño */
+    --_g: #0000 52%, #170409 54% 57%, #0000 59%; /* Primer color negro */
+    background: radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0
+        calc(var(--s) / 2),
+        radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s) / 2) 0,
+        radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
+        radial-gradient(farthest-side at 50% -33.33%, var(--_g)), #67917a; /* Fondo verde */
+    background-size: calc(var(--s) / 4.667) var(--s),
+        var(--s) calc(var(--s) / 4.667);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineamos hacia arriba */
+    padding-top: 5%; /* Ajustamos para subir el formulario */
+    overflow: hidden; /* Elimina la barra de desplazamiento */
+}
+/*Fondo fin*/
+/* Estilos del formulario */
+.wrapper {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #ffffff; /* Fondo blanco sólido */
+    --bg-color-alt: #666;
+    --main-color: #323232;
+}
+
+/* switch card */
+.switch {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 50px;
+    height: 20px;
+}
+
+.card-side::before {
+    position: absolute;
+    content: 'Log in';
+    left: -70px;
+    top: 0;
+    width: 100px;
+    text-decoration: underline;
+    color: #fff; /* Color blanco para el texto */
+    font-weight: 600;
+}
+
+.card-side::after {
+    position: absolute;
+    content: 'Sign up';
+    left: 70px;
+    top: 0;
+    width: 100px;
+    text-decoration: none;
+    color: #fff; /* Color blanco para el texto */
+    font-weight: 600;
+}
+
+.toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    transition: 0.3s;
+}
+
+.slider:before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    left: -2px;
+    bottom: 2px;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 0 var(--main-color);
+    transition: 0.3s;
+}
+
+.toggle:checked + .slider {
+    background-color: var(--input-focus);
+}
+
+.toggle:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+.toggle:checked ~ .card-side:before {
+    text-decoration: none;
+}
+
+.toggle:checked ~ .card-side:after {
+    text-decoration: underline;
+}
+
+/* card */ 
+.flip-card__inner {
+    width: 300px;
+    height: 400px; /* Ajustado para incluir la edad */
+    position: relative;
+    background-color: transparent;
+    perspective: 1000px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.toggle:checked ~ .flip-card__inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card__front, .flip-card__back {
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #ffffff; /* Fondo blanco sólido */
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid black; /* Bordes negros */
+    box-shadow: 4px 4px black; /* Sombras negras */
+}
+
+.flip-card__back {
+    width: 100%;
+    transform: rotateY(180deg);
+}
+
+.flip-card__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.flip-card__input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black; /* Bordes negros en los inputs */
+    background-color: transparent;
+    box-shadow: 4px 4px black; /* Sombras negras */
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+}
+
+.flip-card__input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+}
+
+.flip-card__input:focus {
+    border: 2px solid var(--input-focus);
+}
+
+.flip-card__btn:active, .button-confirm:active {
+    box-shadow: 0px 0px black;
+    transform: translate(3px, 3px);
+}
+
+.flip-card__btn {
+    margin: 20px 0 20px 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black; /* Bordes negros en los botones */
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px black; /* Sombras negras */
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+}
+.flip-card_social_btn {
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black; /* Bordes negros en los botones */
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px black; /* Sombras negras */
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+/* Estilos de botones de redes sociales */
+.social-btn {
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    border-radius: 50%; /* Hacer los botones circulares */
+    border: 2px solid black; /* Bordes negros en los botones de redes sociales */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 4px 4px black; /* Sombras negras */
+    cursor: pointer;
+    margin: 0 5px; /* Margen entre los botones */
+    transition: background-color 0.3s;
+    display: flex; /* Para centrar los iconos */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
+
+/* Efecto hover para los botones de redes sociales */
+.social-btn:hover {
+    background-color: #f0f0f0; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Iconos de redes sociales */
+.social-icon {
+    width: 24px; /* Tamaño del icono */
+    height: 24px; /* Tamaño del icono */
+}
+
+.social-container {
+    display: flex; /* Para alinear los botones horizontalmente */
+    justify-content: center; /* Centrado horizontal */
+    gap: 10px; /* Espacio entre los botones */
+}
+/* css login fin */
+
+/* Agregar estilos para las flechas de votación */
+.votacion button {
+    color: #333; /* Color por defecto */
+}
+
+.votacion button.votado.flecha-arriba {
+    color: green; /* Color verde para flecha arriba votada */
+}
+
+.votacion button.votado.flecha-abajo {
+    color: red; /* Color rojo para flecha abajo votada */
+}
+
+/* Asegúrate de que las clases flecha-arriba y flecha-abajo estén en los botones */

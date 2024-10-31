@@ -1,0 +1,84 @@
+/* Estilos personalizados para la página de inicio */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-brand.active {
+    color: #0d6efd !important;
+}
+
+/* Estilos personalizados para la página de perfil */
+.perfil-imagen {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Estilos para las tarjetas de eventos */
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Estilos para los botones de votación */
+.votacion button {
+    padding: 0;
+    color: #6c757d;
+    transition: color 0.2s ease-in-out;
+}
+
+.votacion button:hover {
+    color: #0d6efd;
+}
+
+.votacion button.votado.flecha-arriba {
+    color: #198754;
+}
+
+.votacion button.votado.flecha-abajo {
+    color: #dc3545;
+}
+
+.votes {
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+/* Estilos para las notificaciones */
+.bg-gradient {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajustes para el marketplace */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Estilos para la barra de navegación inferior */
+.navbar.fixed-bottom {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.navbar.fixed-bottom .navbar-brand {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.navbar.fixed-bottom .navbar-brand:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.navbar.fixed-bottom .navbar-brand.active {
+    background-color: rgba(13, 110, 253, 0.1);
+}
