@@ -1,5 +1,5 @@
 /* css perfil */
-.body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -63,7 +63,7 @@
 }
 /* css perfil fin*/
 /* css eventos*/
-.body {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -94,7 +94,7 @@
 /* css eventos fin*/
 /* AppUni/styles.css */
 /* css perfil */
-.body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
