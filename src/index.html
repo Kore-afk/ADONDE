@@ -3,51 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADONDE - Inicia Sesión</title>
+    <meta name="description" content="ADONDE - La plataforma universitaria para descubrir eventos, conectarte con tu comunidad y comprar o vender artículos de segunda mano.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Adonde - Login</title>
 </head>
-<body>
-    <div class="container">
-        <div class="wrapper">
-            <div class="card-switch">
-                <label class="switch">
-                    <input type="checkbox" class="toggle">
-                    <span class="slider"></span>
-                    <span class="card-side"></span>
-                    <div class="flip-card__inner">
-                        <div class="flip-card__front">
-                            <div class="title">Log in</div>
-                            <form class="flip-card__form" action="pages/eventos.html">
-                                <input type="text" class="flip-card__input" placeholder="Email" required>
-                                <input type="password" class="flip-card__input" placeholder="Password" required>
-                                <button type="submit" class="flip-card__btn">Log in</button>
-                            </form>
-                            <div class="social-container">
-                                <button type="submit" class="flip-card_social_btn"><img src="./assets/fb.png" alt="Facebook" class="social-icon"></button>
-                                <button type="submit" class="flip-card_social_btn"><img src="./assets/ig.png" alt="Instagram" class="social-icon"></button>
-                                <button type="submit" class="flip-card_social_btn"><img src="./assets/apple.png" alt="Apple" class="social-icon"></button>
-                                <button type="submit" class="flip-card_social_btn"><img src="./assets/google.png" alt="Google" class="social-icon"></button>
-                            </div>
-                        </div>
-                        <div class="flip-card__back">
-                            <div class="title">Sign up</div>
-                            <form class="flip-card__form" action="">
-                                <input type="text" class="flip-card__input" placeholder="Name" required>
-                                <input type="email" class="flip-card__input" placeholder="Email" required>
-                                <input type="password" class="flip-card__input" placeholder="Password" required>
-                                <button type="submit" class="flip-card__btn button-confirm">Sign up</button>
-                            </form>
-                            <div class="social-container">
-                                <button class="social-btn"><img src="./assets/fb.png" alt="Facebook" class="social-icon"></button>
-                                <button class="social-btn"><img src="./assets/ig.png" alt="Instagram" class="social-icon"></button>
-                                <button class="social-btn"><img src="./assets/apple.png" alt="Apple" class="social-icon"></button>
-                                <button class="social-btn"><img src="./assets/google.png" alt="Google" class="social-icon"></button>
-                            </div>
-                        </div>
-                    </div>
-                </label>
+<body class="login-page">
+
+    <div class="login-bg">
+        <div class="login-wrapper">
+
+            <!-- Tab Switch -->
+            <div class="login-switch" id="loginSwitch">
+                <div class="login-switch-slider" id="loginSlider"></div>
+                <div class="login-switch-labels">
+                    <span id="labelLogin" class="login-active" onclick="showLogin()">Iniciar Sesión</span>
+                    <span id="labelSignup" onclick="showSignup()">Registrarse</span>
+                </div>
             </div>
+
+            <!-- Flip Card -->
+            <div class="flip-card-inner" id="flipCard">
+
+                <!-- Front: Login -->
+                <div class="flip-card-front">
+                    <div class="login-title">Bienvenido 👋</div>
+                    <form class="login-form" onsubmit="goToApp(event)">
+                        <input type="email" class="login-input" placeholder="Correo electrónico" value="estudiante@universidad.edu" required>
+                        <input type="password" class="login-input" placeholder="Contraseña" value="password123" required>
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-arrow-right me-2"></i> Entrar
+                        </button>
+                    </form>
+                    <div class="login-divider">O continúa con</div>
+                    <div class="login-social-container">
+                        <button type="button" class="login-social-btn" title="Facebook"><img src="./assets/fb.png" alt="Facebook" class="login-social-icon"></button>
+                        <button type="button" class="login-social-btn" title="Instagram"><img src="./assets/ig.png" alt="Instagram" class="login-social-icon"></button>
+                        <button type="button" class="login-social-btn" title="Apple"><img src="./assets/apple.png" alt="Apple" class="login-social-icon"></button>
+                        <button type="button" class="login-social-btn" title="Google"><img src="./assets/google.png" alt="Google" class="login-social-icon"></button>
+                    </div>
+                </div>
+
+                <!-- Back: Sign Up -->
+                <div class="flip-card-back">
+                    <div class="login-title">Crear Cuenta ✨</div>
+                    <form class="login-form" onsubmit="goToApp(event)">
+                        <input type="text" class="login-input" placeholder="Nombre completo" required>
+                        <input type="email" class="login-input" placeholder="Correo institucional" required>
+                        <input type="password" class="login-input" placeholder="Contraseña (mín. 8 caracteres)" required>
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-user-plus me-2"></i> Crear cuenta
+                        </button>
+                    </form>
+                    <div class="login-divider">O continúa con</div>
+                    <div class="login-social-container">
+                        <button type="button" class="login-social-btn" title="Facebook"><img src="./assets/fb.png" alt="Facebook" class="login-social-icon"></button>
+                        <button type="button" class="login-social-btn" title="Instagram"><img src="./assets/ig.png" alt="Instagram" class="login-social-icon"></button>
+                        <button type="button" class="login-social-btn" title="Apple"><img src="./assets/apple.png" alt="Apple" class="login-social-icon"></button>
+                        <button type="button" class="login-social-btn" title="Google"><img src="./assets/google.png" alt="Google" class="login-social-icon"></button>
+                    </div>
+                </div>
+
+            </div><!-- /flip-card-inner -->
+
         </div>
     </div>
+
+    <script>
+        let isSignup = false;
+
+        function showLogin() {
+            if (isSignup) toggle();
+        }
+
+        function showSignup() {
+            if (!isSignup) toggle();
+        }
+
+        function toggle() {
+            isSignup = !isSignup;
+            const card   = document.getElementById('flipCard');
+            const slider = document.getElementById('loginSlider');
+            const lLogin  = document.getElementById('labelLogin');
+            const lSignup = document.getElementById('labelSignup');
+
+            if (isSignup) {
+                card.classList.add('flipped');
+                slider.classList.add('slid');
+                lLogin.classList.remove('login-active');
+                lSignup.classList.add('login-active');
+            } else {
+                card.classList.remove('flipped');
+                slider.classList.remove('slid');
+                lLogin.classList.add('login-active');
+                lSignup.classList.remove('login-active');
+            }
+        }
+
+        function goToApp(e) {
+            e.preventDefault();
+            window.location.href = 'pages/eventos.html';
+        }
+    </script>
 </body>
 </html>

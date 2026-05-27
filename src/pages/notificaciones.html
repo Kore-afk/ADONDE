@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notificaciones - Adonde</title>
+    <title>Notificaciones - ADONDE</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Style System -->
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Deferred Common Script -->
+    <script src="../js/functions.js" defer></script>
 </head>
-<body class="bg-light">
+<body>
     <!-- Top Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Notificaciones</a>
+            <a class="navbar-brand fw-extrabold" href="#">Notificaciones</a>
             <div class="d-flex align-items-center">
-                <button class="btn btn-outline-secondary btn-sm">
-                    <i class="fas fa-check-double"></i> Marcar todo como leído
+                <button class="btn btn-outline-secondary btn-sm px-3 py-2">
+                    <i class="fas fa-check-double me-1"></i> Marcar todo como leído
                 </button>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5 pt-4">
+    <!-- Main Container -->
+    <div class="container mt-5 pt-5">
         <!-- Notification Filters -->
-        <div class="row mb-4">
+        <div class="row mb-4 mt-2">
             <div class="col-12">
-                <div class="btn-group w-100">
-                    <button class="btn btn-outline-primary active">Todas</button>
-                    <button class="btn btn-outline-primary">Eventos</button>
-                    <button class="btn btn-outline-primary">Marketplace</button>
-                    <button class="btn btn-outline-primary">Sistema</button>
+                <div class="btn-group w-100 border-glass" style="border-radius: 12px; overflow: hidden;">
+                    <button class="btn btn-primary active py-2">Todas</button>
+                    <button class="btn btn-outline-primary py-2">Eventos</button>
+                    <button class="btn btn-outline-primary py-2">Marketplace</button>
                 </div>
             </div>
         </div>
@@ -37,106 +46,12 @@
         <!-- Notifications List -->
         <div class="row">
             <div class="col-12">
-                <div class="card shadow-sm">
-                    <div class="list-group list-group-flush">
-                        <div class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <div class="bg-primary bg-gradient text-white rounded-circle p-2">
-                                        <i class="fas fa-briefcase"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">Nuevo evento cerca: Feria de empleo</h6>
-                                        <small class="text-muted">Ahora</small>
-                                    </div>
-                                    <p class="mb-1">¡No te pierdas la oportunidad de encontrar trabajo!</p>
-                                    <small class="text-muted">
-                                        <i class="fas fa-map-marker-alt me-1"></i>Campus Central
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <div class="bg-success bg-gradient text-white rounded-circle p-2">
-                                        <i class="fas fa-glass-cheers"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">Invitación a evento: Proyecto X 2024</h6>
-                                        <small class="text-muted">2h</small>
-                                    </div>
-                                    <p class="mb-1">@usuario te ha invitado a este evento</p>
-                                    <div class="btn-group btn-group-sm">
-                                        <button class="btn btn-success btn-sm">Aceptar</button>
-                                        <button class="btn btn-danger btn-sm">Rechazar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <div class="bg-warning bg-gradient text-white rounded-circle p-2">
-                                        <i class="fas fa-store"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">Mensaje nuevo: Venta de laptop</h6>
-                                        <small class="text-muted">5h</small>
-                                    </div>
-                                    <p class="mb-1">Tienes un mensaje pendiente sobre tu producto</p>
-                                    <button class="btn btn-outline-primary btn-sm">
-                                        <i class="fas fa-reply me-1"></i>Responder
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <div class="bg-info bg-gradient text-white rounded-circle p-2">
-                                        <i class="fas fa-book"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">Nuevo evento: Feria del libro</h6>
-                                        <small class="text-muted">1d</small>
-                                    </div>
-                                    <p class="mb-1">Evento que podría interesarte cerca de tu ubicación</p>
-                                    <button class="btn btn-outline-primary btn-sm">
-                                        <i class="fas fa-info-circle me-1"></i>Ver más
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <div class="bg-primary bg-gradient text-white rounded-circle p-2">
-                                        <i class="fas fa-calendar-check"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">Recordatorio: Clandes prepa 5</h6>
-                                        <small class="text-muted">2d</small>
-                                    </div>
-                                    <p class="mb-1">El evento comenzará en 2 días</p>
-                                    <small class="text-muted">
-                                        <i class="fas fa-clock me-1"></i>30 de septiembre, 8:00 PM
-                                    </small>
-                                </div>
+                <div class="card shadow-sm mb-4">
+                    <div class="list-group list-group-flush" id="notificationsContainer">
+                        <!-- Content injected dynamically by functions.js -->
+                        <div class="text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Cargando notificaciones...</span>
                             </div>
                         </div>
                     </div>
@@ -145,8 +60,8 @@
         </div>
     </div>
 
-    <!-- Bottom Navigation -->
-    <nav class="navbar fixed-bottom navbar-light bg-white shadow-lg">
+    <!-- Bottom Navigation (iOS-Style Floating) -->
+    <nav class="navbar fixed-bottom navbar-dark">
         <div class="container-fluid justify-content-around">
             <a class="navbar-brand" href="eventos.html"><i class="fas fa-glass-cheers"></i></a>
             <a class="navbar-brand" href="marketplace-ventas.html"><i class="fas fa-store"></i></a>
@@ -155,6 +70,7 @@
         </div>
     </nav>
 
+    <!-- Bootstrap Bundle with Popper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,128 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Adonde</title>
+    <title>Eventos - ADONDE</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <!-- Custom Style System -->
     <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Deferred Common Script -->
     <script src="../js/functions.js" defer></script>
 </head>
-<body class="bg-light">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm">
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">ADONDE</a>
+            <a class="navbar-brand fw-extrabold" href="#">ADONDE</a>
             <div class="d-flex align-items-center">
                 <div class="dropdown me-3">
-                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown">
-                        <i class="fas fa-filter"></i> Filtrar
+                    <button class="btn btn-outline-primary dropdown-toggle px-3 py-2" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-filter me-1"></i> Filtrar
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Más populares</a></li>
-                        <li><a class="dropdown-item" href="#">Más recientes</a></li>
-                        <li><a class="dropdown-item" href="#">Esta semana</a></li>
+                    <ul class="dropdown-menu dropdown-menu-dark bg-secondary border-glass" aria-labelledby="filterDropdown">
+                        <li><a class="dropdown-item py-2" href="#">Más populares</a></li>
+                        <li><a class="dropdown-item py-2" href="#">Más recientes</a></li>
                     </ul>
                 </div>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createEventModal">
-                    <i class="fas fa-plus"></i> Crear Evento
+                <button class="btn btn-primary px-3 py-2" data-bs-toggle="modal" data-bs-target="#createEventModal">
+                    <i class="fas fa-plus me-1"></i> Crear Evento
                 </button>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5 pt-4">
-        <div class="row g-4">
-            <!-- Event Cards -->
-            <div class="col-md-8">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h5 class="card-title mb-0">Fiesta de Bienvenida</h5>
-                            <div class="votacion">
-                                <button class="btn btn-link flecha-arriba"><i class="fas fa-arrow-up"></i></button>
-                                <span class="votes">42</span>
-                                <button class="btn btn-link flecha-abajo"><i class="fas fa-arrow-down"></i></button>
-                            </div>
-                        </div>
-                        <p class="text-muted">
-                            <i class="fas fa-calendar-alt me-2"></i>30 de septiembre, 2024
-                            <i class="fas fa-map-marker-alt ms-3 me-2"></i>Auditorio Principal
-                        </p>
-                        <p class="card-text">¡Gran fiesta para dar la bienvenida a los nuevos estudiantes!</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="badge bg-primary me-2">Fiesta</span>
-                                <span class="badge bg-secondary">Social</span>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-user-plus me-1"></i>Asistir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h5 class="card-title mb-0">Torneo de Fútbol</h5>
-                            <div class="votacion">
-                                <button class="btn btn-link flecha-arriba"><i class="fas fa-arrow-up"></i></button>
-                                <span class="votes">28</span>
-                                <button class="btn btn-link flecha-abajo"><i class="fas fa-arrow-down"></i></button>
-                            </div>
-                        </div>
-                        <p class="text-muted">
-                            <i class="fas fa-calendar-alt me-2"></i>30 de septiembre, 2024
-                            <i class="fas fa-map-marker-alt ms-3 me-2"></i>Campo Deportivo
-                        </p>
-                        <p class="card-text">Torneo interuniversitario de fútbol. ¡Inscribe a tu equipo!</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="badge bg-success me-2">Deportes</span>
-                                <span class="badge bg-info">Competencia</span>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-user-plus me-1"></i>Participar
-                            </button>
-                        </div>
+    <!-- Main Content Grid -->
+    <div class="container mt-5 pt-5">
+        <div class="row g-4 mt-2">
+            <!-- Dynamic Event Cards Feed Container -->
+            <div class="col-md-8" id="eventsContainer">
+                <!-- Content injected dynamically by functions.js -->
+                <div class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando eventos...</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Sidebar -->
+            <!-- Sidebar Filters and Categories -->
             <div class="col-md-4">
-                <div class="card shadow-sm mb-4">
+                <!-- Event Categories Card -->
+                <div class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Eventos Populares</h5>
-                        <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-1">Feria del Libro</h6>
-                                    <small class="text-muted">3d</small>
-                                </div>
-                                <small class="text-muted">15 personas asistirán</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-1">Hackathon 2024</h6>
-                                    <small class="text-muted">5d</small>
-                                </div>
-                                <small class="text-muted">32 personas asistirán</small>
-                            </a>
+                        <h5 class="card-title mb-3" style="color: #ffffff; font-weight: 700;"><i class="fas fa-th-large me-2" style="color: var(--accent-purple);"></i>Categorías</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#" class="badge bg-primary text-decoration-none py-2 px-3 border border-white" style="transform: scale(1.05);">Todo</a>
+                            <a href="#" class="badge bg-primary text-decoration-none py-2 px-3">Fiestas</a>
+                            <a href="#" class="badge bg-success text-decoration-none py-2 px-3">Deportes</a>
+                            <a href="#" class="badge bg-info text-decoration-none py-2 px-3">Académico</a>
+                            <a href="#" class="badge bg-warning text-decoration-none py-2 px-3">Cultural</a>
+                            <a href="#" class="badge bg-danger text-decoration-none py-2 px-3">Música</a>
+                            <a href="#" class="badge bg-secondary text-decoration-none py-2 px-3">Social</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Event statistics or general info card -->
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Categorías</h5>
-                        <div class="d-flex flex-wrap gap-2">
-                            <a href="#" class="badge bg-primary text-decoration-none">Fiestas</a>
-                            <a href="#" class="badge bg-success text-decoration-none">Deportes</a>
-                            <a href="#" class="badge bg-info text-decoration-none">Académico</a>
-                            <a href="#" class="badge bg-warning text-decoration-none">Cultural</a>
-                            <a href="#" class="badge bg-danger text-decoration-none">Música</a>
-                            <a href="#" class="badge bg-secondary text-decoration-none">Social</a>
+                        <h5 class="card-title mb-3" style="color: #ffffff; font-weight: 700;"><i class="fas fa-info-circle me-2" style="color: var(--accent-blue);"></i>Sobre ADONDE</h5>
+                        <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.5;">
+                            Vota por los eventos que más te interesen. Los eventos con más votos subirán a la cima del feed para que todos los estudiantes los descubran.
+                        </p>
+                        <hr style="border-color: rgba(255,255,255,0.08);">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-users-cog text-muted"></i>
+                            <small class="text-muted">Desarrollado para estudiantes universitarios.</small>
                         </div>
                     </div>
                 </div>
@@ -133,33 +89,33 @@
     </div>
 
     <!-- Create Event Modal -->
-    <div class="modal fade" id="createEventModal" tabindex="-1">
-        <div class="modal-dialog">
+    <div class="modal fade" id="createEventModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Crear Nuevo Evento</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title" style="font-weight: 800;"><i class="fas fa-calendar-plus me-2" style="color: var(--accent-blue);"></i>Crear Nuevo Evento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="createEventForm">
                         <div class="mb-3">
-                            <label class="form-label">Nombre del evento</label>
-                            <input type="text" class="form-control" required>
+                            <label class="form-label" style="font-weight: 600; font-size: 0.9rem;">Nombre del evento</label>
+                            <input type="text" class="form-control" placeholder="Ej. Bienvenida de Ingeniería" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Fecha</label>
+                            <label class="form-label" style="font-weight: 600; font-size: 0.9rem;">Fecha</label>
                             <input type="date" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Lugar</label>
-                            <input type="text" class="form-control" required>
+                            <label class="form-label" style="font-weight: 600; font-size: 0.9rem;">Lugar / Ubicación</label>
+                            <input type="text" class="form-control" placeholder="Ej. Auditorio Central" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Descripción</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <label class="form-label" style="font-weight: 600; font-size: 0.9rem;">Descripción</label>
+                            <textarea class="form-control" rows="3" placeholder="Detalla de qué trata tu evento, horarios, requisitos, etc..." required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Categoría</label>
+                            <label class="form-label" style="font-weight: 600; font-size: 0.9rem;">Categoría</label>
                             <select class="form-select">
                                 <option>Fiesta</option>
                                 <option>Deportes</option>
@@ -169,18 +125,18 @@
                                 <option>Social</option>
                             </select>
                         </div>
+                        <div class="modal-footer pb-0 px-0">
+                            <button type="button" class="btn btn-outline-secondary px-3 py-2" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary px-4 py-2">Crear Evento</button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" form="createEventForm" class="btn btn-primary">Crear Evento</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bottom Navigation -->
-    <nav class="navbar fixed-bottom navbar-light bg-white shadow-lg">
+    <!-- Bottom Navigation (iOS-Style Floating) -->
+    <nav class="navbar fixed-bottom navbar-dark">
         <div class="container-fluid justify-content-around">
             <a class="navbar-brand active" href="eventos.html"><i class="fas fa-glass-cheers"></i></a>
             <a class="navbar-brand" href="marketplace-ventas.html"><i class="fas fa-store"></i></a>
@@ -189,6 +145,7 @@
         </div>
     </nav>
 
+    <!-- Bootstrap Bundle with Popper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
